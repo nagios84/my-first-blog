@@ -12,10 +12,14 @@
 	
 </head>
 <body>
-<div class="container">
+<div class="container mb-10">
 	{% block content %}
 	    
 	{% endblock content %}
+	{% if user.is_authenticated %}  
+	
+	<a href="{% url 'post_new_url' %}" class="top-menu" style="position: fixed;top: 10px;left: 10px;"><span class="glyphicon glyphicon-plus">new post</span></a>
+	{% endif %}
 </div>
 </body>
 </html>
