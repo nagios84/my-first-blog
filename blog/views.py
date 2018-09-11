@@ -43,4 +43,4 @@ def post_edit(request, id):
             return redirect('post_detail_url', id=post.id)
     else:
         form = PostForm(instance=post)
-    return render(request, 'blog/post_edit.html', {'form': form})
+    return render(request, 'blog/post_new.html', {'form': form})
